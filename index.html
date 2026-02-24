@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR"><head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Book Plus | Vitrine Pública</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#001f3f",
+            "navy": "#001f3f",
+            "background-light": "#ffffff",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      @apply bg-white text-[#1a1a1a] antialiased;
+    }
+    .hero-gradient {
+      background: linear-gradient(to right, rgba(0, 31, 63, 0.9) 0%, rgba(0, 31, 63, 0.4) 50%, rgba(0, 31, 63, 0) 100%);
+    }
+  </style>
+</head>
+<body class="bg-white min-h-screen">
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 px-6 py-4">
+  <div class="max-w-[1280px] mx-auto flex items-center justify-between gap-10">
+    <div class="flex items-center gap-2 shrink-0">
+      <div class="text-navy flex items-center">
+        <span class="material-symbols-outlined text-3xl">auto_stories</span>
+      </div>
+      <h1 class="text-2xl font-black tracking-tighter text-navy">BOOK PLUS</h1>
+    </div>
+    <div class="flex-1 max-w-xl">
+      <div class="relative group">
+        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400 group-focus-within:text-navy">
+          <span class="material-symbols-outlined text-xl">search</span>
+        </div>
+        <input class="w-full bg-gray-50 border-gray-100 border rounded-full py-2.5 pl-11 pr-4 text-sm focus:ring-2 focus:ring-navy/10 focus:bg-white focus:border-navy transition-all placeholder:text-gray-400" placeholder="Encontre sua próxima leitura..." type="text"/>
+      </div>
+    </div>
+    <div class="flex items-center gap-8 shrink-0">
+      <nav class="hidden lg:flex items-center gap-8 text-[11px] font-bold uppercase tracking-[0.2em] text-gray-500">
+        <a class="hover:text-navy transition-colors" href="#">Catálogo</a>
+        <a class="hover:text-navy transition-colors" href="#">Lançamentos</a>
+        <a class="hover:text-navy transition-colors" href="#">Mais Vendidos</a>
+      </nav>
+      <button class="bg-navy text-white text-[11px] font-bold uppercase tracking-[0.2em] px-7 py-3 rounded-full hover:bg-slate-800 transition-all shadow-sm hover:shadow-md">
+        Login Admin
+      </button>
+    </div>
+  </div>
+</header>
+<section class="relative h-[560px] w-full overflow-hidden">
+  <div class="absolute inset-0">
+    <img alt="Ambiente de leitura aconchegante" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfmiFAGbUFa0lTX5XasEEjKiwcVkFbXwoEzo8yCgHVgq5hSkEWsYsWYOg8XwwZG72fhd7h5b0P1i7pYf9ph9jcJtRuconesMJPn1GnHSu902LHK6AQr8xb4F53ylLXhqFiXedW-nVmENvmAhiDX_Rwr_BBDIwZalBQRqo5rr0zUZ4UxTKCejP__dfAxIbSNd5NN7vExip_mU0Wz4cn8zDRHWV7LfSXJXjVWl721PPNvh1jpRMdZPY5fgIBc5IV36Tjipxv60FkQVUv"/>
+  </div>
+  <div class="absolute inset-0 hero-gradient"></div>
+  <div class="relative h-full max-w-[1280px] mx-auto px-6 flex flex-col justify-center items-start">
+    <div class="max-w-2xl text-white">
+<span class="inline-block px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-[10px] font-bold uppercase tracking-[0.3em] mb-6 border border-white/20">
+                Curadoria Exclusiva
+            </span>
+      <h2 class="text-6xl md:text-7xl font-extrabold tracking-tight mb-6 leading-none">
+        Descubra seu <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">próximo capítulo.</span>
+      </h2>
+      <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-lg leading-relaxed font-light">
+        Mergulhe em histórias que transformam. Explore nossa seleção premium de obras clássicas e contemporâneas.
+      </p>
+      <div class="flex gap-4">
+        <a class="bg-white text-navy px-8 py-4 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-gray-100 transition-all shadow-lg hover:-translate-y-1" href="#catalogo">
+          Explorar Catálogo
+        </a>
+        <a class="border border-white/30 backdrop-blur-sm text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white/10 transition-all" href="#">
+          Ver Promoções
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<main class="max-w-[1280px] mx-auto py-24 px-6" id="catalogo">
+  <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+    <div class="flex flex-col gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-[2px] bg-navy"></div>
+        <span class="text-[11px] font-bold uppercase tracking-[0.3em] text-gray-400">Novidades</span>
+      </div>
+      <h2 class="text-4xl font-extrabold text-navy tracking-tight">Destaques da Semana</h2>
+    </div>
+    <div class="flex gap-4">
+      <button class="p-2 border border-gray-200 rounded-full hover:border-navy hover:text-navy transition-colors">
+        <span class="material-symbols-outlined">filter_list</span>
+      </button>
+      <select class="border-gray-200 rounded-full text-sm font-medium pr-10 focus:ring-navy focus:border-navy">
+        <option>Ordenar por: Relevância</option>
+        <option>Mais recentes</option>
+        <option>Menor preço</option>
+      </select>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-10 gap-y-16">
+    <div class="group flex flex-col gap-5">
+      <div class="relative overflow-hidden aspect-[3/4.5] bg-gray-100 rounded-xl shadow-md transition-shadow hover:shadow-xl">
+        <img alt="Capa do livro" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfPUvluJk-HiK0Px5gMH_BQBTb27qwJ60GGLCTrpOAAYFz8ODYpVVOV2O3H0-BSlmEa2ohe6ftiet7tpJzzXqwrqqUor68qTw-bwD1uGjhWJcvHsWClI0VuBYce5rxZwgBVQV4bhHqPxrEBM3LkzshPTJe7ieqD4TS1WBM3tBpYhGbRcqANDyZcqO8gLGClOuhnWi0GrUe89miMPaSuLf43oTjqYI0bFS_SBPM5Oh-f_SIfyjMhezNzi5D1Mv_gaT50wKuwIsP8bdt"/>
+        <div class="absolute inset-0 bg-navy/0 group-hover:bg-navy/20 transition-colors duration-500"></div>
+        <button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/95 text-navy px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
+          Ver detalhes
+        </button>
+      </div>
+      <div class="flex flex-col gap-1.5 px-1">
+        <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-navy/50">Poesia</span>
+        <h3 class="text-navy font-bold text-lg leading-tight group-hover:text-blue-900 transition-colors">O Silêncio do Mar</h3>
+        <p class="text-gray-400 text-sm italic font-light">Helena Vasconcelos</p>
+      </div>
+    </div>
+    <div class="group flex flex-col gap-5">
+      <div class="relative overflow-hidden aspect-[3/4.5] bg-gray-100 rounded-xl shadow-md transition-shadow hover:shadow-xl">
+        <img alt="Capa do livro" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV0Fo6K0kg37JnY2R67Fc9vlpJ4pwABfTQsIXi9LAdJOi8oz6Y3xsHDbk_5w5Hp8YSNjmdpSpjYuOlnVUm-uy7b45GWzXqhhI9-ao9rt8Q2lrG9nNo2lgys-BBnYPVXxc8VVcqUNy_PPpbX7N2Z5hRfoziivBV6HIgVrjo8zW0sqjyXYCFaEmdF9Cb-fRdOKMYPed3WE9LQybhTTrWaUn0WJftRaZvSO8udDnj2HI10poLHdjIE2qfvT7Qz7F5D9LYyPF_qnOT-z-D"/>
+        <div class="absolute inset-0 bg-navy/0 group-hover:bg-navy/20 transition-colors duration-500"></div>
+        <button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/95 text-navy px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
+          Ver detalhes
+        </button>
+      </div>
+      <div class="flex flex-col gap-1.5 px-1">
+        <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-navy/50">Romance</span>
+        <h3 class="text-navy font-bold text-lg leading-tight group-hover:text-blue-900 transition-colors">Caminhos de Areia</h3>
+        <p class="text-gray-400 text-sm italic font-light">Marcos Dutra</p>
+      </div>
+    </div>
+    <div class="group flex flex-col gap-5">
+      <div class="relative overflow-hidden aspect-[3/4.5] bg-gray-100 rounded-xl shadow-md transition-shadow hover:shadow-xl">
+        <img alt="Capa do livro" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8VyP47_-PgunXI5hTdpn5e_owd_pT-1_tY6trdpnEXHEe9sO6ybipb7pxSkP7hu54OJxwfj2LJ3K_885etjv0OXG2Msa_37dVO0YgCsEfyl9Ih6YRCy8b4pcTAiPHNScTg9f7P1suLyTLjbQpvOF2fu3MA4cFToqfJY_8CcPJPiVvdvzxDU91Vboa9fzVFZCf3OLKL3lUiPKgJHTgdqYKD9uPo55yF2b2WY68rg-K8cwOom3jkFjsXIK8lit88024T_n8yjqD1kaL"/>
+        <div class="absolute inset-0 bg-navy/0 group-hover:bg-navy/20 transition-colors duration-500"></div>
+        <button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/95 text-navy px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
+          Ver detalhes
+        </button>
+      </div>
+      <div class="flex flex-col gap-1.5 px-1">
+        <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-navy/50">Ensaios</span>
+        <h3 class="text-navy font-bold text-lg leading-tight group-hover:text-blue-900 transition-colors">Arquitetura da Alma</h3>
+        <p class="text-gray-400 text-sm italic font-light">Beatriz Muniz</p>
+      </div>
+    </div>
+    <div class="group flex flex-col gap-5">
+      <div class="relative overflow-hidden aspect-[3/4.5] bg-gray-100 rounded-xl shadow-md transition-shadow hover:shadow-xl">
+        <img alt="Capa do livro" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAURKfYJHJw6LLOsifFzm7CAan-Kw4sdvlY2yyE-RjNdqOuAhBvlXXJZBQSt01H_rmgrFGXhpsGxir_GPmSqxfW6zsRfFDKE1yyLi91QXM4ZltWse8vjQ5qwflgoj1jLHyhH8EmKzueAbeYhY-2ynolxHQxWikUS9t4-CZyLYjgy77QmqitnknAwAuHjuQchnjtv7CR6Z2Z3iwI3dD_cChz7-azkF60eFyKoHhjpOy8R8Xvtoe5PEsHZlL_ij7Unm-GwXENrTrkdpa-"/>
+        <div class="absolute inset-0 bg-navy/0 group-hover:bg-navy/20 transition-colors duration-500"></div>
+        <button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/95 text-navy px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
+          Ver detalhes
+        </button>
+      </div>
+      <div class="flex flex-col gap-1.5 px-1">
+        <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-navy/50">Mistério</span>
+        <h3 class="text-navy font-bold text-lg leading-tight group-hover:text-blue-900 transition-colors">O Último Inverno</h3>
+        <p class="text-gray-400 text-sm italic font-light">Ricardo Almeida</p>
+      </div>
+    </div>
+    <div class="group flex flex-col gap-5">
+      <div class="relative overflow-hidden aspect-[3/4.5] bg-gray-100 rounded-xl shadow-md transition-shadow hover:shadow-xl">
+        <img alt="Capa do livro" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCKr_gIoXXy95TZvHUJeV5yR_iaxKnqfvrnMCL13IkIE9jYcb59TxKX69WSPlIiD_Bt_PgP55FqBWijBPwT2Ihcay2S3dG8ahjRClm5bPYOHYvSMlgjo1CJTSsBnMRb_d-ZDCiVMzHon5-ebB3-3OL4prNKMOWYrAXcfbKgggIQVO8fvS2emtJ99rbOal5320paTrt9fCV9P_secqgFk7rW2PMj5M-HBIbm0zJm-JP3l05io5rNJw27c23fpHnrRslyHJ4NVI7230k"/>
+        <div class="absolute inset-0 bg-navy/0 group-hover:bg-navy/20 transition-colors duration-500"></div>
+        <button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/95 text-navy px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
+          Ver detalhes
+        </button>
+      </div>
+      <div class="flex flex-col gap-1.5 px-1">
+        <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-navy/50">Crônicas</span>
+        <h3 class="text-navy font-bold text-lg leading-tight group-hover:text-blue-900 transition-colors">Crônicas da Capital</h3>
+        <p class="text-gray-400 text-sm italic font-light">Fernanda Costa</p>
+      </div>
+    </div>
+    <div class="group flex flex-col gap-5">
+      <div class="relative overflow-hidden aspect-[3/4.5] bg-gray-100 rounded-xl shadow-md transition-shadow hover:shadow-xl">
+        <img alt="Capa do livro" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSgr_vyBigWMwwVrRouBgS916W22Ws3OqI2rZhMRgoO6PX_iVW2VGAgmrJdorj4ffehQFjklPhZJ_Am7rHl0469VKQiz-HHNvRYxXzpq7vPG-BZGCWapyG2Lk8fkh-VKw-OSbk61Kfb8IJgBhilmM9KlPYlssH4z5oqAs985k4CdaupuonOrBFhzGow36ifDJVsx-vYdyogku1ag9FUwpi6WGyrKJdpgXpnN43ClCKAsSLXdKYT5ojtWLw5gNqi-hAauUdsg0NXKQR"/>
+        <div class="absolute inset-0 bg-navy/0 group-hover:bg-navy/20 transition-colors duration-500"></div>
+        <button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/95 text-navy px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
+          Ver detalhes
+        </button>
+      </div>
+      <div class="flex flex-col gap-1.5 px-1">
+        <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-navy/50">Aventura</span>
+        <h3 class="text-navy font-bold text-lg leading-tight group-hover:text-blue-900 transition-colors">Além do Horizonte</h3>
+        <p class="text-gray-400 text-sm italic font-light">Juliano Mendes</p>
+      </div>
+    </div>
+    <div class="group flex flex-col gap-5">
+      <div class="relative overflow-hidden aspect-[3/4.5] bg-gray-100 rounded-xl shadow-md transition-shadow hover:shadow-xl">
+        <img alt="Capa do livro" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIrOniwwx7O8UYZpSiLJUgTJXhZna95wsoFrsm-nZTeLuJkMTHrgkmPvjcq1ZsrD5L_VsN-dig-V9df78pKgQflbtzZAS9x8xTuMWeMOlXQKdRiINMpABc62S6Yfm2Ne72hh4Z3eOoM2NTRKyvoGXXA-Cs2ttpKTnB3HiAk3lET2KeQ0Jry5uwO9LgDRuDWfNDJHdXCKJLru6YRxJIPdp1pLAa1Mw4F2pjW5va6Dby_ukqe6rY3yBOe6ToBV62BSJ72_QKPow_iOqE"/>
+        <div class="absolute inset-0 bg-navy/0 group-hover:bg-navy/20 transition-colors duration-500"></div>
+        <button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/95 text-navy px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
+          Ver detalhes
+        </button>
+      </div>
+      <div class="flex flex-col gap-1.5 px-1">
+        <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-navy/50">Psicologia</span>
+        <h3 class="text-navy font-bold text-lg leading-tight group-hover:text-blue-900 transition-colors">O Despertar da Mente</h3>
+        <p class="text-gray-400 text-sm italic font-light">Dra. Sônia Luz</p>
+      </div>
+    </div>
+    <div class="group flex flex-col gap-5">
+      <div class="relative overflow-hidden aspect-[3/4.5] bg-gray-100 rounded-xl shadow-md transition-shadow hover:shadow-xl">
+        <img alt="Capa do livro" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL-p7VMFKMrJ3m2mgNbTHioDJnF--bq4fgkF2CMeH_ZlX5876uyFH0_SBCKuGWl0zGNM6QqQ6BudDR4njMloF7JX49DmXoonlUO0mMf7rTbxcZSDSLth-GKJw9C5rjkhb1NB4_Go1OJ9-MmEZckBFxD_JAfENWKZhavhiQw-ETy_lsD1lS1ioEwnP8MLTEc4Wb8TuaI4R7IBwkrUi-TPIEqh8oTj5OKvZBDUn9o5-YYUGusr6AgNmG8PrLMa24ACBs4PCWU_4rKTiI"/>
+        <div class="absolute inset-0 bg-navy/0 group-hover:bg-navy/20 transition-colors duration-500"></div>
+        <button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/95 text-navy px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
+          Ver detalhes
+        </button>
+      </div>
+      <div class="flex flex-col gap-1.5 px-1">
+        <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-navy/50">Contos</span>
+        <h3 class="text-navy font-bold text-lg leading-tight group-hover:text-blue-900 transition-colors">Fragmentos</h3>
+        <p class="text-gray-400 text-sm italic font-light">Carlos Eduardo</p>
+      </div>
+    </div>
+    <div class="group flex flex-col gap-5">
+      <div class="relative overflow-hidden aspect-[3/4.5] bg-gray-100 rounded-xl shadow-md transition-shadow hover:shadow-xl">
+        <img alt="Capa do livro" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbecKio3xro7kgbDmdD5jUiNAkzgWcfTOjbZi7iWXl_fzEavnubnulN_POs4g-6qNfk6wMnQjQ0mO-k_XYG3U_LWGTmPlVzISCU776heCbx9zeFxvcTQqzj1trhylmNN_bzEvYadHW2LlCvxvEDjjQfMAfEjFsiSy7ZXyOGKDP4sI6ejnK7o8LefZzrqkm5xkRfwqmLpiI6UTat6AaESrl9MoJZt2VSlsNYPDHwSxxUJYkZ2d9RzpD3uVgZRfPoF4VZTMc1QbyOvo5"/>
+        <div class="absolute inset-0 bg-navy/0 group-hover:bg-navy/20 transition-colors duration-500"></div>
+        <button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/95 text-navy px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
+          Ver detalhes
+        </button>
+      </div>
+      <div class="flex flex-col gap-1.5 px-1">
+        <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-navy/50">Ficção</span>
+        <h3 class="text-navy font-bold text-lg leading-tight group-hover:text-blue-900 transition-colors">Luz e Sombra</h3>
+        <p class="text-gray-400 text-sm italic font-light">Patrícia Lima</p>
+      </div>
+    </div>
+    <div class="group flex flex-col gap-5">
+      <div class="relative overflow-hidden aspect-[3/4.5] bg-gray-100 rounded-xl shadow-md transition-shadow hover:shadow-xl">
+        <img alt="Capa do livro" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM3ZBORHmk162uKNaSa-WFyUxyw28GESaomS1hWZPyM_gAXj6_KJBCVWzm5VeltLEUk2HVBDCLLaR8hiN0s2Yypu2dQrLaEq_onPTi70tfQxrDPlN_HXVz1lufQrZmc75rZdshIccrcBMaUGl24yPQe9uUH1YvAK2I5ZikgqwUeEFOwlCG3h4qpkTOIPZsBqmoUMzpG7VVv4iJqnptVarRuirYRLW8choCFUnyrRu2hZQiQfNloFzxI9d99I5b0pfXwmt6DR88LRP2"/>
+        <div class="absolute inset-0 bg-navy/0 group-hover:bg-navy/20 transition-colors duration-500"></div>
+        <button class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/95 text-navy px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
+          Ver detalhes
+        </button>
+      </div>
+      <div class="flex flex-col gap-1.5 px-1">
+        <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-navy/50">Botânica</span>
+        <h3 class="text-navy font-bold text-lg leading-tight group-hover:text-blue-900 transition-colors">O Jardim Suspenso</h3>
+        <p class="text-gray-400 text-sm italic font-light">Mariana Rocha</p>
+      </div>
+    </div>
+  </div>
+  <div class="mt-24 flex justify-center">
+    <button class="px-12 py-4 border border-navy text-navy rounded-full font-bold text-xs uppercase tracking-[0.2em] hover:bg-navy hover:text-white transition-all">
+      Ver Catálogo Completo
+    </button>
+  </div>
+</main>
+<footer class="border-t border-gray-100 py-20 px-6 bg-gray-50/50">
+  <div class="max-w-[1280px] mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
+      <div class="flex flex-col gap-6">
+        <div class="flex items-center gap-2 text-navy">
+          <span class="material-symbols-outlined text-3xl">auto_stories</span>
+          <span class="text-2xl font-black tracking-tighter">BOOK PLUS</span>
+        </div>
+        <p class="text-sm text-gray-500 max-w-xs leading-relaxed">
+          Sua livraria digital de confiança. Uma curadoria minimalista das obras mais impactantes para o seu crescimento.
+        </p>
+        <div class="flex gap-4">
+          <a class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:border-navy hover:text-navy transition-all" href="#">
+            <span class="material-symbols-outlined text-xl">share</span>
+          </a>
+          <a class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:border-navy hover:text-navy transition-all" href="#">
+            <span class="material-symbols-outlined text-xl">favorite</span>
+          </a>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+        <div class="flex flex-col gap-4">
+          <h4 class="text-[10px] font-bold uppercase tracking-widest text-navy">Explorar</h4>
+          <nav class="flex flex-col gap-3 text-sm text-gray-500">
+            <a class="hover:text-navy" href="#">Lançamentos</a>
+            <a class="hover:text-navy" href="#">Mais Vendidos</a>
+            <a class="hover:text-navy" href="#">E-books</a>
+          </nav>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h4 class="text-[10px] font-bold uppercase tracking-widest text-navy">Suporte</h4>
+          <nav class="flex flex-col gap-3 text-sm text-gray-500">
+            <a class="hover:text-navy" href="#">Ajuda</a>
+            <a class="hover:text-navy" href="#">Envios</a>
+            <a class="hover:text-navy" href="#">Trocas</a>
+          </nav>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h4 class="text-[10px] font-bold uppercase tracking-widest text-navy">Institucional</h4>
+          <nav class="flex flex-col gap-3 text-sm text-gray-500">
+            <a class="hover:text-navy" href="#">Sobre Nós</a>
+            <a class="hover:text-navy" href="#">Contato</a>
+            <a class="hover:text-navy" href="#">Privacidade</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="pt-8 border-t border-gray-200/60 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400">
+        © 2024 Book Plus. Todos os direitos reservados.
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Desenvolvido com</span>
+        <span class="material-symbols-outlined text-sm text-red-400 fill-1">favorite</span>
+        <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">em SENAI</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>
